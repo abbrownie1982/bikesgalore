@@ -1,10 +1,77 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.nav-bar{
-  color:blue;
+.body-top-padding{
+	padding-top: 50px;
 }
+
+body{
+	line-height: 1.5;
+	font-size: 1.5rem;
+	
+}
+
+h1{	
+	font-family: Sailec,Helvetica,Arial,sans-serif;
+	color: #23527c;
+	text-align: center;
+}
+
+
+/******** nav bar ********/
+
+.navbar{
+	background-color: #6C464F;	
+}
+
+.navbar-inverse .navbar-brand {
+    color: #B3CDD1;
+}
+
+
+
+.companyName{  
+    color: #23527c;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0;
+}
+
+.companyName a{
+	color: #B3CDD1;
+
+}
+
+.companyName a:hover{
+	text-decoration: none;
+	background-color: #6C464F;
+	color: white;
+}
+
+.nav-text{
+	font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #B3CDD1;
+    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #79565F;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #B3CDD1;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #B3CDD1;
+}
+
 
 .home-page{
   font-family: Futura, san serif;
@@ -12,16 +79,23 @@
   text-align: center;
 }
 
+//about section
 .about-page{
   font-family: Futura, san serif;
   color: red;
   text-align: center;
 }
 
-.contact-page{
-  font-family: Futura, san serif;
-  color: green;
-  text-align: center;
+//contact setion
+.contact-section{
+	text-align: center;
+}
+
+.contact-form{
+    //text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-description{

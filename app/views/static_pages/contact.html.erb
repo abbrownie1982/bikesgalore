@@ -1,5 +1,37 @@
-<div class = "contact-page">
-<h1>Contact Us!</h1>
-<p>Questions? Comments?</p>
-<p>Drop us a note at example@test.com</p>
+<h1>Contact Us</h1>
+<div class="contact-section">
+	<p>If you have any questions,  please contact us via the form below</p>
 </div>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you", class: "contact-form form-horizontal") do %>
+
+    <div class="form-group">
+      <div class="col-sm-2 control-label">
+        <%= label_tag :name %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2 control-label">
+        <%= label_tag :message %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>
+    </div>      
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= submit_tag "Send", class:"btn btn-default" %>
+      </div>
+    </div>  
+<% end %>
