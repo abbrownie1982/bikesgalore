@@ -11,7 +11,7 @@
 <h2><%= product.name %></h2>
 <%= image_tag(product.image_url, class: "img-responsive") %>
 <p><%= product.description %></p>
-<strong><%= product.price %>$</strong>
+<strong>$<%= product.price %></strong>
 <%= link_to 'Show', product %>
 <%= link_to 'Edit', edit_product_path(product) %>
 <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
