@@ -9,28 +9,18 @@
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
- <!-- Wrapper for slides -->
+ 
+   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag 'bike1.jpg' %>
-      <div class="carousel-caption">
-        <p>Purple City Bike</p>
-      </div>
-    </div>
-    
-    <div class="item">
-      <%= image_tag 'bike2.jpg' %>
-      <div class="carousel-caption">
-        <p>Black Cruiser</p>
-      </div>
-    </div>
-    <div class="item">
-      <%= image_tag 'bike3.jpg' %>
-      <div class="carousel-caption">
-        <p>Black Cruiser</p>
-      </div>
-    </div>
-  </div>
+		<% @products.each do |product| %>
+		<div class="item <%= " active" if product == @products.first %>">
+			<%= link_to( image_tag(product.image_url), product) %>
+			<div class="carousel-caption">
+				<p><%= product.name %></p>
+			</div>
+		</div>
+		<% end %>
+</div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
