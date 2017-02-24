@@ -14,6 +14,7 @@
 
 </head>
  <body class="body-top-padding">
+   
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     	<div class="container-fluid nav-text">
         	<div class="navbar-header">
@@ -26,6 +27,14 @@
             	<div class="companyName navbar-brand">
             		<a id="brand-name" href="/static_pages/index">Bikes Galore</a>
             	</div>         	
+            
+            <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
+          <div class="form-group">
+            <%= label_tag(:q, "Search for:", class: "sr-only") %>
+            <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+            <%= submit_tag("Go", class: "btn") %>
+          <% end %>
+          </div>
             </div>
            
             <div class="navbar-collapse collapse">
