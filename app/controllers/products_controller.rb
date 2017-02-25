@@ -4,9 +4,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    # @products = Product.all
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("name LIKE ?", "%#{search_term}%")
+      if Rails.env == "development"
+        @products = Product.where("name LIKE ?", "%#{search_term}%")
+      else
+        @products = Product.where("name ilike ?", "%#{search_term}%")
+      end  
+
+    #return our filtered list here
     else
       @products = Product.all
     end
@@ -33,7 +40,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully created.' }
+        format.html { redirect_to :back, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -66,6 +73,17 @@ class ProductsController < ApplicationController
     end
   end
 
+  # CALL PARAMS
+  # def index
+  #   if params[:q]
+  #     search_term = params[:q]
+  #     @products = Product.search(search_term)
+  #     # return our filtered list here
+  #   else
+  #     @products = Product.all
+  #   end
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -74,6 +92,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+      params.require(:product).permit(:name, :description, :image_url, :flavour, :price)
     end
 end
