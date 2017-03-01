@@ -50,3 +50,6 @@ end
   gem 'spring'
 end
 
+  gem 'devise'
+
+
