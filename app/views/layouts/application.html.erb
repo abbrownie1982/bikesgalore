@@ -56,7 +56,12 @@
             </div>                    
         </div>
 </nav>
-<p class="notice"><%= notice %></p>
+<% if notice %>
+    <p id="notice" class="alert notice-info"><%= notice %></p>
+<% end %> 
+  <% if alert %>
+    <p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 
