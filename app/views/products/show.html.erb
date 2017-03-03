@@ -7,10 +7,11 @@
 			<%= link_to 'Edit', edit_product_path(@product) %> |
 			<%= link_to 'Back', products_path %>
 		</div>
+		
 		<div class="col-xs-12 col-md-6">
 			<h2><%= @product.name %></h2>
 			<p><%= @product.description %></p><br>
-			<p><strong><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> </strong><%= @product.price %>€</br>
+			<p><strong><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> </strong><%= @product.price %>$</br>
 			<strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </strong><%= @product.colour %></br></p>
 		</div>
 	</div>
