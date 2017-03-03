@@ -2,3 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.img-responsive, h4 {
+	text-align: center;
+}
+
+.btn-default {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#stripe-btn {
+	text-align: center;
+	margin: 1em;
+}
+
+#paginate {
+	text-align: center;
+}
