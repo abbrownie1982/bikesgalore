@@ -4,16 +4,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # @products = Product.all
     if params[:q]
       search_term = params[:q]
-      if Rails.env == "development"
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
-      else
-        @products = Product.where("name ilike ?", "%#{search_term}%")
-      end  
-
-    #return our filtered list here
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
     else
       @products = Product.all
     end
@@ -22,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+      @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new
@@ -40,7 +34,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to :back, notice: 'Product was successfully created.' }
+        format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -54,7 +48,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -72,17 +66,6 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  # CALL PARAMS
-  # def index
-  #   if params[:q]
-  #     search_term = params[:q]
-  #     @products = Product.search(search_term)
-  #     # return our filtered list here
-  #   else
-  #     @products = Product.all
-  #   end
-  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
