@@ -9,12 +9,11 @@ var refreshRating = function() {
 };
 
 $(document).on('turbolinks:load ajaxSuccess',function(){
-
+    refreshRating();
     $('.product-column').matchHeight();
 
     $('.alert').delay(2000).fadeOut(1500);
 
-    refreshRating();
 
     $('.image-zoom').elevateZoom({
         zoomType: 'lens',
