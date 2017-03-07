@@ -23,6 +23,7 @@
 			<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 			<%=	 render "comments/new_comment" %>
 			<%=	 render "comments/comments" %>
+			<%= will_paginate @comments %>
 		</div>
 	</div>
 </div>
