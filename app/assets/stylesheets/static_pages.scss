@@ -2,11 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.body-top-padding{
+	padding-top: 50px;
+}
 
 body{
 	line-height: 1.5;
 	font-size: 1.5rem;
-	
 }
 
 h1{	
@@ -34,31 +36,30 @@ h1{
 }
 
 .navbar-inverse .navbar-brand {
-    color: #B3CDD1;
+  color: #B3CDD1;
 }
 
 .pull-right{
-    color: #B3CDD1;
-    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
+  color: #B3CDD1;
+  font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
 	padding-top: 6px;
 }
 
 .pull-right li a{
-    color: #B3CDD1;
+  color: #B3CDD1;
 }
 
 .companyName{  
-    color: #23527c;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 0;
+  color: #23527c;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0;
 }
 
 .companyName a{
 	color: #B3CDD1;
-
 }
 
 .companyName a:hover{
@@ -71,47 +72,43 @@ h1{
 	font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
-
 .navbar-inverse .navbar-nav>li>a {
-    color: #B3CDD1;
-    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
+  color: #B3CDD1;
+  font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #79565F;
+  background-color: #79565F;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #B3CDD1;
+  border-color: #B3CDD1;
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #B3CDD1;
+  background-color: #B3CDD1;
 }
 
 .input-group{
-		padding: 8px 12px;
-		border-radius: 0px;
-		border-width: 1px;
-		color: rgb(119, 119, 119);
-		background-color: rgb(248, 248, 248);
-		border-color: rgb(231, 231, 231);
-		box-shadow: none;
-		outline: none;
-
+	padding: 8px 12px;
+	border-radius: 0px;
+	border-width: 1px;
+	color: rgb(119, 119, 119);
+	background-color: rgb(248, 248, 248);
+	border-color: rgb(231, 231, 231);
+	box-shadow: none;
+	outline: none;
 }
 
 .navbar-collapse form[role="search"] button[type="reset"] {
-		display: none;
+	display: none;
 }
 
 .navbar-brand {
-		font-size:30px;
-
+	font-size:30px;
 }
-
 
 .home-page{
   font-family: Futura, san serif;
@@ -132,15 +129,15 @@ h1{
 }
 
 .contact-form{
-    width: 95%;
-    margin-left: 35%;
+  width: 95%;
+  margin-left: 35%;
 }
 
 //thank you page
 
 .panel-body p{
-   font-size: 1.5em;
-   color:purple;
+  font-size: 1.5em;
+  color:purple;
 }
 
 .product-description{
