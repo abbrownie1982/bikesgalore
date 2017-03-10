@@ -17,44 +17,44 @@
    
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     	<div class="container-fluid nav-text">
-        	<div class="navbar-header">
-            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            		<span class="sr-only">Toggle navigation</span>
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-            	</button>
-            	<div class="companyName navbar-brand">
-            		<a id="brand-name" href="/static_pages/index">Bikes Galore</a>
-            	</div>         	
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <div class="companyName navbar-brand">
+          <a id="brand-name" href="/static_pages/index">Bikes Galore</a>
+        </div>         	
             
-            <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
-          <div class="form-group">
-            <%= label_tag(:q, "Search for:", class: "sr-only") %>
-            <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
-            <%= submit_tag("Go", class: "btn") %>
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
+        <div class="form-group">
+          <%= label_tag(:q, "Search for:", class: "sr-only") %>
+          <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+          <%= submit_tag("Go", class: "btn") %>
           <% end %>
-          </div>
-            </div>
-           
-            <div class="navbar-collapse collapse">
-             <ul class="nav navbar-nav navbar-right">
-            		<li><a href="/static_pages/landing_page">Home</a></li>
-            		<li><a href="/products">Products</a></li>
-                <li><a href="/static_pages/about">About</a></li>                                    
-                <li><a href="/static_pages/contact">Contact</a></li>
-            	</ul>
-            	<ul class="nav pull-right">
-                <li>
-                <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                <% else %>
-                <%= link_to('Login', new_user_session_path) %>
-                <% end %>
-                </li>
-              </ul>
-            </div>                    
         </div>
+      </div>
+           
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/static_pages/landing_page">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/static_pages/about">About</a></li>                                    
+          <li><a href="/static_pages/contact">Contact</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li>
+            <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+          </li>
+        </ul>
+      </div>                    
+    </div>
 </nav>
 <% if notice %>
     <p id="notice" class="alert notice-info"><%= notice %></p>

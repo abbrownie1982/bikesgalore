@@ -10,20 +10,20 @@
 		
 		<div class="col-xs-12 col-md-6">
 			<h2><%= @product.name %></h2>
-			<p><%= @product.description %></p><br>
-			<p><strong><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> </strong><%= @product.price %></br>
-			<strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </strong><%= @product.colour %></br></p>
+				<p><%= @product.description %></p><br>
+				<p><strong><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> </strong><%= @product.price %></br>
+				<strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </strong><%= @product.colour %></br></p>
 		</div>
 	</div>
 	<div class="row">
     	<div class="col-xs-12 col-md-6 ">
-       		<h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> User Ratings</h4>			
-			<p><%= @product.highest_rating_comment %></p><br>
-			<p><%= @product.lowest_rating_comment %></p>
-			<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-			<%=	 render "comments/new_comment" %>
-			<%=	 render "comments/comments" %>
-			<%= will_paginate @comments %>
+       	<h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> User Ratings</h4>			
+					<p><%= @product.highest_rating_comment %></p><br>
+					<p><%= @product.lowest_rating_comment %></p>
+					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+					<%=	 render "comments/new_comment" %>
+					<%=	 render "comments/comments" %>
+					<%= will_paginate @comments %>
 		</div>
 	</div>
 </div>

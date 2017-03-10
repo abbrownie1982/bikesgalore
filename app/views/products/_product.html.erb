@@ -1,22 +1,19 @@
 <div class="col-xs-6 col-md-3">
-    
     <h2 class="product-title"><%= product.name %></h2>
     <h2 class="product-title back-layer"></h2>
-    <%=image_tag(product.image_url, class: "img-responsive", id: "product_image") %>
-    <p><strong>Description:</strong><%= product.description %>
-    <br>
+      <%=image_tag(product.image_url, class: "img-responsive", id: "product_image") %>
+      <p><strong>Description:</strong><%= product.description %>
+      <br>
     <div class="buttons">
-
       <%= link_to 'Show', product, :class => 'btn btn-success' %>
       <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-warning' %>
-      <%= link_to 'Destroy', product, :class => 'btn btn-danger', method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Destroy', product, :class => 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
-    <br>
-    <strong>Price: </strong><%= product.price %>
-    <br>
-    <br>
-    <strong>Colour:</strong><%= product.colour %></p>
+      <br>
+      <strong>Price: </strong><%= product.price %>
+      <br>
+      <br>
+      <strong>Colour:</strong><%= product.colour %></p>
 </div>
 
     

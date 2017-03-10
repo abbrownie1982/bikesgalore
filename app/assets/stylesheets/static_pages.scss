@@ -1,9 +1,7 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.body-top-padding{
-	padding-top: 50px;
-}
+
 
 body{
 	line-height: 1.5;
@@ -39,7 +37,17 @@ h1{
     color: #B3CDD1;
 }
 
+.pull-right{
+    color: #B3CDD1;
+    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+	padding-top: 6px;
+}
 
+.pull-right li a{
+    color: #B3CDD1;
+}
 
 .companyName{  
     color: #23527c;
