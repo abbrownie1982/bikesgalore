@@ -9,6 +9,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record -- only development/test environments
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -55,4 +56,6 @@ end
   gem 'devise'
   
   gem 'rails-controller-testing'
+  
+  gem "factory_girl_rails", "~> 4.0"
 
