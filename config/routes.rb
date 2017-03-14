@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'payments/new'
+
+  get 'payments/create'
+
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   
   resources :products do
@@ -14,6 +18,7 @@ end
   get 'static_pages/index'
   get 'static_pages/landing_page'
   post 'static_pages/thank_you'
+  post 'payments/create'
   root 'static_pages#landing_page'
 
   # The priority is based upon order of creation: first created -> highest priority.
