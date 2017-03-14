@@ -20,8 +20,13 @@
        	<h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> User Ratings</h4>			
 					
 					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-					<%=	 render "comments/new_comment" %>
+					
 					<%=	 render "comments/comments" %>
+					<%= form_tag "/payments/create" do %>
+  				<%= render partial: "shared/stripe_checkout_button" %>
+					<% end %>
+					<%=	 render "comments/new_comment" %>
+					
 					<%= will_paginate @comments %>
 		</div>
 	</div>
