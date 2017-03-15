@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  
   # Use sqlite3 as the database for Active Record -- only development/test environments
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
@@ -47,15 +48,24 @@ group :production do
 end
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  
+#user authentication functions
+gem 'devise'
 
-  gem 'cancancan', '~> 1.10'
-  
-  gem 'will_paginate', '~> 3.1.1'
-  
-  gem 'devise'
-  
-  gem 'rails-controller-testing'
-  
-  gem 'stripe'
+#user authorization function
+gem 'cancancan', '~> 1.10'
 
+#page break function
+gem 'will_paginate', '~> 3.1.0'
+
+#functional test writing
+gem 'rails-controller-testing'
+
+#accept payments with stripe
+gem 'stripe'
+
+#security gem
+gem 'brakeman', :require => false
+
+#strong password checker
+gem 'strong_password', '~> 0.0.5'
