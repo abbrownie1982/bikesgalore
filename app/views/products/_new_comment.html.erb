@@ -2,7 +2,7 @@
 <div class = "comment_page">
   <h4>Leave a comment</h4>
 </div>  
-  <%= form_for([@product, @product.comments.build]) do |f| %>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
   
   <div class="container">
     <form class="form-group">

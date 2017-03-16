@@ -1,17 +1,20 @@
-$(document).on('ready page:load', function(){
+var refreshRating = function() {
     $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
     $('.rated').raty({ path: '/assets',
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        }
     });
-});
+};
 
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load ajaxSuccess', function(){
+       
+       refreshRating();
+       
       $('.img-zoom').elevateZoom({
-      	tint:true, 
-      	tintColour:'#ff2e00', 
-      	tintOpacity:0.5  
+      	zoomType: "lens",
+  			lensShape : "round",
+  			lensSize    : 200  
  	  });
-}); 
+ }); 
