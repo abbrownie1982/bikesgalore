@@ -1,7 +1,7 @@
 
 
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
+  <%= form_for(@product) do |f| %>
+    <% if @product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
       <ul>
@@ -12,27 +12,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <form class="form-group">
+  <div class="form-group row">
+    <%= f.label :name, class: "col-sm-2 col-form-label" %>
+    <%= f.text_field :name, class: "col-sm-8", placeholder: "Name" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+
+  <div class="form-group row">
+    <%= f.label :description, class: "col-sm-2 col-form-label" %>
+    <%= f.text_area :description, class: "col-sm-8", placeholder: "Description"  %>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+
+  <div class="form-group row">
+    <%= f.label :image_url, class: "col-sm-2 col-form-label" %>
+    <%= f.text_field :image_url, class: "col-sm-8", placeholder: "Image url" %>
   </div>
-  <div class="field">
-  <%= f.label :colour %><br>
-  <%= f.text_field :colour %>
+
+  <div class="form-group row">
+    <%= f.label :colour, class: "col-sm-2 col-form-label" %>
+    <%= f.text_field :colour, class: "col-sm-4", placeholder: "Colour" %>
+  </div> 
+
+  <div class="form-group row">
+    <%= f.label :price, class: "col-sm-2 col-form-label" %>
+    <%= f.text_field :price, class: "col-sm-4", placeholder: "Price" %>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
+
 <% end %>
+</form>

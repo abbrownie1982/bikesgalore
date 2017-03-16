@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,22 +27,24 @@
         <div class="companyName navbar-brand">
           <a id="brand-name" href="/static_pages/index">Bikes Galore</a>
         </div>         	
-            
+        
+         
           <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
-        <div class="form-group">
-          <%= label_tag(:q, "Search for:", class: "sr-only") %>
+          <div class="form-group">
+          <%= label_tag(:q, "", class: "sr-only") %>
           <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
           <%= submit_tag("Go", class: "btn") %>
           <% end %>
-        </div>
+          </div>
+        
       </div>
            
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/static_pages/landing_page">Home</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/static_pages/about">About</a></li>                                    
-          <li><a href="/static_pages/contact">Contact</a></li>
+          <li><%= link_to('Home', static_pages_landing_page_path) %></li> 
+          <li><%= link_to("Products", products_path) %></li>
+          <li><%= link_to("About", static_pages_about_path) %></li>
+          <li><%= link_to("Contact", static_pages_contact_path) %></li>
         </ul>
         <ul class="nav pull-right">
           <li>

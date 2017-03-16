@@ -69,3 +69,4 @@ gem 'brakeman', :require => false
 
 #strong password checker
 gem 'strong_password', '~> 0.0.5'
+
