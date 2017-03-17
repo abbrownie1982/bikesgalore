@@ -1,5 +1,5 @@
 <div class="col-xs-6 col-md-3">
-    <% cache products do %>
+    <% cache product do %>
     <h2 class="product-title"><%= product.name %></h2>
     <h2 class="product-title back-layer"></h2>
         <%=image_tag(product.image_url, class: "img-responsive", id: "product_image") %>
