@@ -26,7 +26,9 @@ end
   
   # You can have the root of your site routed with "root"
   
-  
+  resources :payments, only: [ :create ]
+
+  mount ActionCable.server => '/cable'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
