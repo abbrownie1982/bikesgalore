@@ -11,14 +11,28 @@ body{
 	font-size: 1.5rem;
 }
 
-h1{	
-	font-family: Sailec,Helvetica,Arial,sans-serif;
-	color: #23527c;
-	text-align: center;
+.home-page h1{
+  font-family: 'Bubbler One';font-size: 22px;
+  color: green;
+  text-align: center;
+}
+
+.home-page h2 {
+  font-family: 'Bubbler One';font-size: 22px;
+  color: green;
+  text-align: center;
 }
 
 //landing page
+
+.lptitle h1 {
+  font-family: 'Bubbler One';font-size: 32px;
+  text-align: center;
+  color: purple;
+}
+
 .lptitle h2{
+  font-family: 'Bubbler One';font-size: 22px;
   text-align: center;
   color: purple;
 }
@@ -41,7 +55,7 @@ h1{
 
 .pull-right{
   color: #B3CDD1;
-  font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-family: 'Bubbler One';font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
 	padding-top: 6px;
@@ -69,12 +83,12 @@ h1{
 }
 
 .nav-text{
-	font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+	font-family: 'Bubbler One';font-size: 22px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
   color: #B3CDD1;
-  font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-family: 'Bubbler One';font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -110,20 +124,36 @@ h1{
 	font-size:30px;
 }
 
-.home-page{
-  font-family: Futura, san serif;
-  color: green;
-  text-align: center;
-}
 
 //about section
 .about-page{
-  font-family: Futura, san serif;
-  color: red;
+  font-family: 'Bubbler One';font-size: 22px;
   text-align: center;
+  padding-bottom: 395px;
+  color: purple;
 }
 
 //contact setion
+
+.contact-section {
+  padding-bottom: 201px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-family: 'Bubbler One';font-size: 15px;
+  color: purple;
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-family: 'Bubbler One';font-size: 32px;
+  color: purple;
+}
+
+.contact-form {
+  padding-left: 400px;
+}
 
 //thank you page
 
@@ -131,9 +161,30 @@ h1{
   font-size: 1.5em;
   color:purple;
 }
+//products page
+
+.products-page h1 {
+  font-family: 'Bubbler One';font-size: 32px;
+  color: green;
+  text-align: center;
+}
 
 .product-description{
-  font-family: Futura, san serif;
+  font-family: 'Bubbler One';font-size: 22px;
   color: green;
+  text-align: center;
+}
+
+.btn-success {
+  margin-left: 80px;
+}
+
+.footer {
+  font-family: 'Bubbler One';font-size: 22px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
   text-align: center;
 }

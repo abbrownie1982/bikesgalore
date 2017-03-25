@@ -2,12 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.comment_page h4 {
-  padding-top: 10px;
-  padding-right: 150px;
+.comment_page h3 {
+  padding-top: 40px;
 }
 
 .comments {
-  margin-left: 20px;
+  padding-left: 40px;
   padding-bottom: 10px;
 }
+
+.reviews {
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+

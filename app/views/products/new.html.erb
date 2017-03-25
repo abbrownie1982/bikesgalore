@@ -1,8 +1,10 @@
-<h1>New Product</h1>
+<div class = "new_product">
+	<h1>New Product</h1>
 
-<%= render 'form', product: @product %>
-<div class="products-form">
-	<div class="col-sm-offset-2 col-sm-10">
-		<%= link_to 'Back', products_path %>
+	<%= render 'form', product: @product %>
+	<div class="products-form">
+		<div class="col-sm-offset-2 col-sm-10">
+			<%= link_to 'Back', products_path %>
+		</div>
 	</div>
 </div>

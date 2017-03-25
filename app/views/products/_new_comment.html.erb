@@ -1,25 +1,18 @@
 <% if signed_in? %>
-<div class = "comment_page">
-  <h4>Leave a comment</h4>
-</div>  
+<div class = "reviews">
+  <h3>Add a review</h3>
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
-  
-  <div class="container">
-    <form class="form-group">
-      <div class="form-group row">
-        <%= f.text_area :body, class:"col-sm-4 form-group", style:"height: 65px;", placeholder:"Write your comment here:" %>
-      </div>
-
-      <div class="form-group row">
-        <%= f.label :body, "Rate me!" %>
-        <div class="rating"></div>
-      </div>
-
-      <div class="form-group row">
-        <%= f.submit "Submit", class: "col-sm-2 btn btn-primary" %>
-      </div>
-
-      <% end %>
-    <% end %>
-    </form>
+    <p>
+      <%= f.label :body, "Comments" %><br>
+      <%= f.text_area :body %>
+    </p>
+   
+     <%= f.label :rating %><br>
+    <div class="rating"></div>
+  </p>
+    <p>
+      <%= f.submit "Submit" %>
+    </p>
+  <% end %>
+<% end %>
 </div>
