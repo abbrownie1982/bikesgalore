@@ -2,23 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .product_row {
-  padding-top: 20px;
+	padding-top: 20px;
 }
 
 .block h3 {
 	font-family: Lucida Console, serif;
 	font-size: 18px;
 	text-align: center;
-
 }
+
 .block .thumbnail {
 	padding: 10px;
 	border: 3px solid darkgrey;
-
 }
+
 .block .thumbnail:hover {
-		border: 3px solid black;
-	}
+	border: 3px solid black;
+}
+
 .block .description {
 	height: 30px;
 	padding-left: 0px;
@@ -28,7 +29,7 @@
 	min-height: 150px;
 	max-height: 150px;
 }
+
 .block {
 	font-family: Lucida Console, serif;
-	
 }

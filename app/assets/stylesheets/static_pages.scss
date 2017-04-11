@@ -1,99 +1,106 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.body-top-padding{
-	padding-top: 50px;
+.body-top-padding {
+  padding-top: 50px;
 }
 
-body{
-	line-height: 1.5;
-	font-size: 1.5rem;
+body {
+  line-height: 1.5;
+  font-size: 1.5rem;
 }
 
-.home-page h1{
-  font-family: 'Bubbler One';font-size: 22px;
+.home-page h1 {
+  font-family: 'Bubbler One';
+  font-size: 22px;
   color: green;
   text-align: center;
 }
 
 .home-page h2 {
-  font-family: 'Bubbler One';font-size: 22px;
+  font-family: 'Bubbler One';
+  font-size: 22px;
   color: green;
   text-align: center;
 }
 
 //landing page
-
 .lptitle h1 {
-  font-family: 'Bubbler One';font-size: 32px;
+  font-family: 'Bubbler One';
+  font-size: 32px;
   text-align: center;
   color: purple;
 }
 
-.lptitle h2{
-  font-family: 'Bubbler One';font-size: 22px;
+.lptitle h2 {
+  font-family: 'Bubbler One';
+  font-size: 22px;
   text-align: center;
   color: purple;
 }
 
-.carousel-caption p{
+.carousel-caption p {
   color: white;
   font-size: 30px;
   text-shadow: 4px black;
 }
 
+
 /******** nav bar ********/
 
-.navbar{
-	background-color: #6C464F;	
+.navbar {
+  background-color: #6C464F;
 }
 
 .navbar-inverse .navbar-brand {
   color: #B3CDD1;
 }
 
-.pull-right{
+.pull-right {
   color: #B3CDD1;
-  font-family: 'Bubbler One';font-size: 22px;
+  font-family: 'Bubbler One';
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
-	padding-top: 6px;
+  padding-top: 6px;
 }
 
-.pull-right li a{
+.pull-right li a {
   color: #B3CDD1;
 }
 
-.companyName{  
+.companyName {
   color: #23527c;
   font-weight: 500;
   text-decoration: none;
   margin: 0;
 }
 
-.companyName a{
-	color: #B3CDD1;
+.companyName a {
+  color: #B3CDD1;
 }
 
-.companyName a:hover{
-	text-decoration: none;
-	background-color: #6C464F;
-	color: white;
+.companyName a:hover {
+  text-decoration: none;
+  background-color: #6C464F;
+  color: white;
 }
 
-.nav-text{
-	font-family: 'Bubbler One';font-size: 22px;
+.nav-text {
+  font-family: 'Bubbler One';
+  font-size: 22px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
   color: #B3CDD1;
-  font-family: 'Bubbler One';font-size: 22px;
+  font-family: 'Bubbler One';
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
   background-color: #79565F;
 }
 
@@ -105,49 +112,50 @@ body{
   background-color: #B3CDD1;
 }
 
-.input-group{
-	padding: 8px 12px;
-	border-radius: 0px;
-	border-width: 1px;
-	color: rgb(119, 119, 119);
-	background-color: rgb(248, 248, 248);
-	border-color: rgb(231, 231, 231);
-	box-shadow: none;
-	outline: none;
+.input-group {
+  padding: 8px 12px;
+  border-radius: 0px;
+  border-width: 1px;
+  color: rgb(119, 119, 119);
+  background-color: rgb(248, 248, 248);
+  border-color: rgb(231, 231, 231);
+  box-shadow: none;
+  outline: none;
 }
 
 .navbar-collapse form[role="search"] button[type="reset"] {
-	display: none;
+  display: none;
 }
 
 .navbar-brand {
-	font-size:30px;
+  font-size: 30px;
 }
 
-
 //about section
-.about-page{
-  font-family: 'Bubbler One';font-size: 22px;
+.about-page {
+  font-family: 'Bubbler One';
+  font-size: 22px;
   text-align: center;
   padding-bottom: 395px;
   color: purple;
 }
 
 //contact setion
-
 .contact-section {
   padding-bottom: 201px;
 }
 
 .contact-section p {
   text-align: center;
-  font-family: 'Bubbler One';font-size: 15px;
+  font-family: 'Bubbler One';
+  font-size: 15px;
   color: purple;
 }
 
 .contact-section h1 {
   text-align: center;
-  font-family: 'Bubbler One';font-size: 32px;
+  font-family: 'Bubbler One';
+  font-size: 32px;
   color: purple;
 }
 
@@ -156,21 +164,22 @@ body{
 }
 
 //thank you page
-
-.panel-body p{
+.panel-body p {
   font-size: 1.5em;
-  color:purple;
+  color: purple;
 }
-//products page
 
+//products page
 .products-page h1 {
-  font-family: 'Bubbler One';font-size: 32px;
+  font-family: 'Bubbler One';
+  font-size: 32px;
   color: green;
   text-align: center;
 }
 
-.product-description{
-  font-family: 'Bubbler One';font-size: 22px;
+.product-description {
+  font-family: 'Bubbler One';
+  font-size: 22px;
   color: green;
   text-align: center;
 }
@@ -180,7 +189,8 @@ body{
 }
 
 .footer {
-  font-family: 'Bubbler One';font-size: 22px;
+  font-family: 'Bubbler One';
+  font-size: 22px;
   position: absolute;
   right: 0;
   left: 0;
