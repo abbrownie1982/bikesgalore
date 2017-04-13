@@ -159,10 +159,6 @@ body {
   color: purple;
 }
 
-.contact-form {
-  padding-left: 400px;
-}
-
 //thank you page
 .panel-body p {
   font-size: 1.5em;
@@ -197,4 +193,47 @@ body {
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .lptitle {
+    padding-top: 10px;
+  }
+  .navbar-form {
+    margin-bottom: -10px;
+  }
+  .navbar-inverse .navbar-form {
+    border-color: transparent;
+  }
+  .contact-section {
+    padding-top: 30px;
+    padding-top: 50px;
+  }
+  .contact-form {
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+  .form-control {
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1400px) {
+  .contact-form {
+    padding-left: 500px;
+    
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form {
+    padding-left: 50px;
+  }
 }
