@@ -35,10 +35,7 @@
           <%= form_tag "/payments/create", :id =>"stripe-button" do %>
           <%= hidden_field_tag(:product_id, @product.id) %>
           <%= render partial: "shared/stripe_checkout_button" %>
-          <% end %> -->
-          <%= render partial: "shared/stripe_checkout_button" %>
-        <% else %>   
-            <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Buy Now', new_user_session_path %></span>
+          <% end %> 
         <% end %>
           
         <% if  current_user && current_user.admin? %>
