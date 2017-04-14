@@ -1,3 +1,6 @@
+require 'spec_helper'
+require 'rails_helper'
+
 class PaymentsController < ApplicationController
 	def create
 		@product = Product.find(params[:product_id])
