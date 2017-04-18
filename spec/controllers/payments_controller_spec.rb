@@ -20,8 +20,12 @@ class PaymentsController < ApplicationController
 				)
 
 			if charge.paid
-				Order.create(:user_id => @user.id, :product_id => @product.id, :total => @product.price)
-				flash[:notice] = "Purchase Approved."
+				Order.create(
+          :product_id => @product,
+          :user_id => @user,
+          :total => @product.price
+				)
+				redirect_to @product
 			end
 
 		rescue Stripe::CardError => e
@@ -47,6 +51,6 @@ class PaymentsController < ApplicationController
 		  # Something else happened, completely unrelated to Stripe
 		end
 		
-		redirect_to @product
+		
 	end
 end
