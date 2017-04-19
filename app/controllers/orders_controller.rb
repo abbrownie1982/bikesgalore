@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
-  before_filter :authenticate_user!
+	before_action :authenticate_user!
+  load_and_authorize_resource
+
   def index
+    @Orders = Order.where("user_id =?", current_user.id)
   end
 
   def show
@@ -14,5 +17,6 @@ class OrdersController < ApplicationController
 
   def destroy
   end
+
 
 end
