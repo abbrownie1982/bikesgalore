@@ -30,25 +30,40 @@
           $<%= @product.price %>
         </p>
         
-        <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
-        <% if signed_in? %>
-          <%= form_tag "/payments/create", :id =>"stripe-button" do %>
-          <%= hidden_field_tag(:product_id, @product.id) %>
+        <p>Average Rating: <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span> </p>
+      
+      <div>
+        <%= form_tag "/payments/create" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
-          <% end %> 
         <% end %>
-          
-        <% if  current_user && current_user.admin? %>
-          <span class="btn btn-primary btn-colour-change" role="button"><%=  link_to 'Edit', edit_product_path(@product)  %></span>
-        <% end %> 
-        <span class="btn btn-primary btn-colour-change" role="button"><%= link_to 'Back', products_path %></span>
       </div>
-    </div>       
+    </br>
+      <div class="show-product-link">
+        <%= link_to ' Back', products_path, class: 'glyphicon glyphicon-arrow-left btn btn-primary', role: 'button'%>
+        <% if signed_in? && current_user.admin? %>
+        <%= link_to ' Edit', edit_product_path(@product), class: 'glyphicon glyphicon-edit btn btn-primary', role: 'button' %>
+        <% end %>
+    <!-- <% end %>-->
+      </div>
+    </div>
+  </div>
+</br>
+  <div class="row">
+    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+    <% if signed_in? %>
+    <div class="col-xs-12 col-sm-5 col-md-5 comments">
+      <%= render partial: "new_comment", locals: {comment: @comment} %>
+    </div>
+    <div class="col-xs-0 col-sm-1 col-md-1 comments"></div>
+    <% end %>
+    <div class="col-xs-12 col-sm-6 col-md-6 comments">
+      <%= render partial: "comments", locals: {comment: @comment} %>
+      <div class="apple_pagination">
+          <div class="apple_pagination page_entries">
+            <%= page_entries_info @comments %>
+          </div>
+          <%= will_paginate @comments, :container => false %>
+      </div>
+    </div>
   </div>
 </div>
-<br>
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!>
-</div>
-  <%= render 'comments'  %>
-  <% end %>
-  <%= render 'new_comment' %>
