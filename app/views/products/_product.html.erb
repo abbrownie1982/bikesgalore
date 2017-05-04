@@ -1,15 +1,15 @@
 
  <% cache product do %>
- <div class="col-xs-12 col-md-3 block " style="height:400px;"> 
-  
-  	<div class="thumbnail">
-    <h3><%= product.name %></h3>
+   <div class="col-xs-12 col-md-3 block " style="height:400px;"> 
     
-    <%= image_tag(product.image_url, class: "img-responsive thumbnail-img") %> 
-    <p class="description"><%= product.description %></p>
-    <p><strong><%= number_to_currency(product.price) %></strong></p>
-    <p><%= link_to 'See more!', product, class:'btn btn-success new-product-btn' %> </p>
-    </div>
- 
-</div>
+    	<div class="thumbnail">
+        <h3><%= product.name %></h3>
+        
+        <%= image_tag(product.image_url, class: "img-responsive thumbnail-img") %> 
+        <p class="description"><%= product.description %></p>
+        <p><strong><%= number_to_currency(product.price) %></strong></p>
+        <p><%= link_to 'See more!', product, class:'btn btn-success new-product-btn' %> </p>
+      </div>
+   
+  </div>
 <% end %>

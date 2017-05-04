@@ -9,7 +9,7 @@ class PaymentsController < ApplicationController
     begin
     charge = Stripe::Charge.create(
       :amount => (@product.price * 100).to_i,
-				:currency => 'chf',
+				:currency => 'usd',
 				:source => token,
 				:description => @product.name + " purchased by " + params[:stripeEmail],
 				:receipt_email => @user.email

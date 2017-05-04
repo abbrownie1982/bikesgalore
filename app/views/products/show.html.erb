@@ -31,6 +31,7 @@
         </p>
         
         <p>Average Rating: <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span> </p>
+        <p>Views: <%= @product.views %></p>
       
       <div>
         <%= form_tag "/payments/create" do %>
